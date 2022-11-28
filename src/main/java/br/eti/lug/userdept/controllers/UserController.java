@@ -20,4 +20,10 @@ public class UserController {
         return result;
     }
 
+    @GetMapping(value = "/{id}")
+    public User findById(@PathVariable Long id) {
+        User result = repository.findById(id).get();
+        return result;
+    }
+
 }
